@@ -16,37 +16,57 @@ int main(){
         cout << "La Formula Para Este Problema Es A^2=B^2-C^2"<<endl;
         int valor1;
         int valor2;
-        valor1 = B * B;
-        valor2 = C * C;
-        int pot1=0;
-        int pot2 = 0;
-        for (int i = 0; i < B; i++){
-            if (i*i == B){
-                pot1 = i;
+        valor2 = B * B;
+        valor1 = C * C;
+        cout << "Formula  Es A^2 = " <<valor1<<"-"<< valor2<< endl;
+        cout << "Formula  Es A^2 = " << valor1 - valor2<< endl;
+        int resultado=0;
+        for (int i = 0; i < valor1 - valor2; i++) {
+            if (i * i == valor1 - valor2) {
+                resultado = i;
                 break;
             }
         }
-
-        for (int i = 0; i < C; i++) {
-            if (i * i == C) {
-                pot2 = i;
-                break;
-            }
+        if (resultado==0)
+        {
+            cout << "La Raiz No Es Perfecta o el valor es menor a 0 " << endl;
         }
-        cout <<"raiz es " << pot1 <<endl;
-        cout << "raiz es " << pot2 <<endl;
+        else
+        {
+            cout << "Formula  Es A = " << resultado << endl;
+        }
+        
+        
     }
     else{
         if (opcion == 2){
             cout << "Dijite el valor de A: " << endl;
             cin >> A;
             cout << "Dijite el valor de C: " << endl;
-            cout << "La Formula Para Este Problema Es B^2=A^2-C^2" << endl;
             cin >> C;
+            cout << "La Formula Para Este Problema Es B^2=A^2-C^2" << endl;
             int valor1;
             int valor2;
-            valor1 = A * A;
-            valor2 = C * C;
+            valor2 = A * A;
+            valor1 = C * C;
+            cout << "Formula  Es B^2 = " << valor1 << "-" << valor2 << endl;
+            cout << "Formula  Es B^2 = " << valor1 - valor2 << endl;
+            int resultado = 0;
+            for (int i = 0; i < valor1 - valor2; i++) {
+                if (i * i == valor1 - valor2) {
+                    resultado = i;
+                    break;
+                }
+            }
+            if (resultado == 0)
+            {
+                cout << "La Raiz No Es Perfecta o el valor es menor a 0 " << endl;
+            }
+            else
+            {
+                cout << "Formula  Es B = " << resultado << endl;
+            }
+
         }
             else{
                 if (opcion == 3){
@@ -59,6 +79,23 @@ int main(){
                     int valor2;
                     valor1 = A * A;
                     valor2 = B * B;
+                    cout << "Formula  Es C^2 = " << valor1 << "+" << valor2 << endl;
+                    cout << "Formula  Es C^2 = " << valor1 + valor2 << endl;
+                    int resultado = 0;
+                    for (int i = 0; i < valor1 + valor2; i++) {
+                        if (i * i == valor1 + valor2) {
+                            resultado = i;
+                            break;
+                        }
+                    }
+                    if (resultado == 0)
+                    {
+                        cout << "La Raiz No Es Perfecta o el valor es menor a 0 " << endl;
+                    }
+                    else
+                    {
+                        cout << "Formula  Es C = " << resultado << endl;
+                    }
                 }
                     else{
                         cout << "Valor Invalido Favor Inserte Opcion Valida " << endl;
